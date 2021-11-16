@@ -32,24 +32,32 @@
         
         /* EX1) Write a selector to target the h1 in jumbotron */
         
-        body > .container .jumbotrom > div > h1  {
+        body > .container .jumbotrom > div > h1 {
             text-decoration: line-through;
         }
 
         /* EX2) Write a selector to target every children of the navbar */
 
         body .container > .nav-scroller > .nav * {
-            background-color: greenyellow;
+            background-color: rgb(205, 255, 130);
         }
 
         /* EX3) Write a selector to target the "continue reading..." inside the jumbotron */
 
-        body > .container .jumbotrom > div p > a  {
+        body .container .jumbotrom .col-md-6 p a {
             text-decoration: line-through;
         }
 
         /* EX4) Write a selector to target the first blogpost */
+
+        body .container .row .blog-main > .blog-post:first-of-type {
+            background-color: indianred;
+        }
+
         /* EX5) Write a selector to target the "even" links in the navbar */
+
+        
+
         /* EX6) Write a selector to target the last blog post */
         /* EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives ) */
         /* EX8) Write a selector to target the second post author */
