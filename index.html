@@ -551,6 +551,13 @@
         delPostButton.addEventListener("click", deleteLastPost)
 
         /* EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name */
+
+        let authorsNames = document.querySelectorAll(".blog-post .blog-post-meta a")
+        for (let i=0; i<authorsNames.length; i++) {
+            authorsNames[i].addEventListener("mouseover", function () {
+                alert(authorsNames[i].innerText)
+            })
+        }
       
     </script>
 </body>
