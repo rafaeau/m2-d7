@@ -497,6 +497,14 @@
         removeLinks()
 
         /* EX15) Write a function to change the column size for heading in jumbotron */
+
+        const changeCol = function () {
+            let jumbotron = document.querySelector(".jumbotron > div")
+            jumbotron.classList.replace("col-md-6", "col-md-12")
+        }
+
+        changeCol()
+
         /* EX16) Write a function to remove the "Search" magnifying glass icon */
         /* EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post */
         /* EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title) */
