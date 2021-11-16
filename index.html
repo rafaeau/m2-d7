@@ -481,12 +481,21 @@
         const changeJumbo = function () {
             let jumbotron = document.querySelector(".jumbotron")
             jumbotron.classList.replace("bg-dark", "bg-info")
-            console.log(jumbotron)
         }
 
         changeJumbo()
 
         /* EX14) Write a function to remove all the links under "Elsewhere" */
+
+        const removeLinks = function () {
+            let elsewhere = document.querySelectorAll("aside .p-4:nth-child(3) ol li a")
+            for (let i=0; i<elsewhere.length; i++) {
+                elsewhere[i].innerHTML = ""
+            }
+        }
+
+        removeLinks()
+
         /* EX15) Write a function to change the column size for heading in jumbotron */
         /* EX16) Write a function to remove the "Search" magnifying glass icon */
         /* EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post */
