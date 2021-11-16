@@ -62,7 +62,7 @@
 
         /* EX6) Write a selector to target the last blog post */
 
-        body .container .row .blog-main > .blog-post:last-of-type {
+        body .container .row .blog-main > .blog-post:nth-child(4) {
             text-decoration: line-through;
         }
 
@@ -521,13 +521,25 @@
             for (let i=0; i<paragraphs.length; i++) {
                 let first50 = paragraphs[i]
                 first50.innerText = first50.innerText.substring(50)
-                console.log(first50)
             }
         }
 
         trimChar()
 
         /* EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title) */
+
+        const addNewPost = function () {
+            let newPost = document.createElement("div")
+            newPost.classList.add("blog-post")
+            newPost.innerHTML = `<h2 class="blog-post-title">Newer Post Title</h2>`
+            let postPlace = document.querySelector(".blog-main")
+            postPlace.appendChild(newPost)
+        }
+
+        let newPostButton = document.querySelector(".blog-main .blog-pagination .btn-outline-secondary")
+        newPostButton.classList.remove("disabled")
+        newPostButton.addEventListener("click", addNewPost)
+
         /* EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post */
         /* EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name */
       
