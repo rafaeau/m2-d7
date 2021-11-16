@@ -32,8 +32,8 @@
         
         /* EX1) Write a selector to target the h1 in jumbotron */
         
-        body > .container .jumbotrom > div > h1 {
-            text-decoration: line-through;
+        .jumbotron h1 {
+            color: red;
         }
 
         /* EX2) Write a selector to target every children of the navbar */
@@ -44,7 +44,7 @@
 
         /* EX3) Write a selector to target the "continue reading..." inside the jumbotron */
 
-        body .container .jumbotrom .col-md-6 p > a {
+        .jumbotron .col-md-6 p > a {
             text-decoration: line-through;
         }
 
@@ -84,9 +84,9 @@
             background-color: blue;
         }
         
-        body:nth-child(3):nth-child(2) * {
-            background-color: blue;
-        }
+        /* :nth-child(3) p:last-of-type > a {
+            background-color: red;
+        } */
         
         /* EX10) Write a selector to target the footer */
 
@@ -451,17 +451,31 @@
         /* EX11) Write a function to add a new link into the navbar */
 
         const newLinkNav = function (href, name) {
+            let navBar = document.querySelector(".nav")
+            navBar.innerHTML += `<a class="p-2 text-muted" href="${href}">${name}</a>`
+
+            /* let navBar = document.querySelector(".nav")
             let newLink = document.createElement("a")
-            newLink.innerHTML = `<a class="p-2 text-muted" href="` + href + `">` + name + `</a>`
-            let navBar = document.getElementsByClassName("nav")
-            navBar.appendChild(newLink)
+
+            newLink.href = href
+            newLink.classList.add("p-2")
+            newLink.classList.add("text-muted")
+            newLink.innerText = name
+
+            navBar.appendChild(newLink) */
         }
 
         newLinkNav("https://www.google.com/", "Google")
 
         /* EX12) Write a function to change the color of the main title */
 
-        
+        const changeTitleColor = function () {
+            let title = document.querySelector(".jumbotron .display-4")
+            console.log(title)
+            title.style.color = "blue"
+        }
+
+        changeTitleColor()
 
         /* EX13) Write a function to change the background of the jumbotron */
         /* EX14) Write a function to remove all the links under "Elsewhere" */
