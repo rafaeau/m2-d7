@@ -44,7 +44,7 @@
 
         /* EX3) Write a selector to target the "continue reading..." inside the jumbotron */
 
-        body .container .jumbotrom .col-md-6 p a {
+        body .container .jumbotrom .col-md-6 p > a {
             text-decoration: line-through;
         }
 
@@ -57,10 +57,15 @@
         /* EX5) Write a selector to target the "even" links in the navbar */
 
         body > .container > .nav-scroller > .nav > a:nth-child(even) {
-            text-decoration: line-through !important;
+            text-decoration: line-through;
         }
 
         /* EX6) Write a selector to target the last blog post */
+
+        body .container .row .blog-main > .blog-post:last-of-type {
+            text-decoration: line-through;
+        }
+
         /* EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives ) */
         /* EX8) Write a selector to target the second post author */
         /* EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly */
