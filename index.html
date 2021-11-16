@@ -471,13 +471,21 @@
 
         const changeTitleColor = function () {
             let title = document.querySelector(".jumbotron .display-4")
-            console.log(title)
             title.style.color = "blue"
         }
 
         changeTitleColor()
 
         /* EX13) Write a function to change the background of the jumbotron */
+
+        const changeJumbo = function () {
+            let jumbotron = document.querySelector(".jumbotron")
+            jumbotron.classList.replace("bg-dark", "bg-info")
+            console.log(jumbotron)
+        }
+
+        changeJumbo()
+
         /* EX14) Write a function to remove all the links under "Elsewhere" */
         /* EX15) Write a function to change the column size for heading in jumbotron */
         /* EX16) Write a function to remove the "Search" magnifying glass icon */
