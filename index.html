@@ -541,6 +541,15 @@
         newPostButton.addEventListener("click", addNewPost)
 
         /* EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post */
+
+        const deleteLastPost = function () {
+            let lastPost = document.querySelectorAll(".blog-post")
+            lastPost[lastPost.length -1].remove()
+        }
+
+        let delPostButton = document.querySelector(".blog-main .blog-pagination .btn-outline-primary")
+        delPostButton.addEventListener("click", deleteLastPost)
+
         /* EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name */
       
     </script>
